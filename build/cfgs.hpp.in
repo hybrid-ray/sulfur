@@ -1,6 +1,7 @@
 #ifndef CFGS_HPP
 #define CFGS_HPP
 
-
+constexpr int SULFUR_VERSION_MAJOR = ${sulfur_VERSION_MAJOR};
+constexpr int SULFUR_VERSION_MINOR = ${sulfur_VERSION_MINOR};
 
 #endif
