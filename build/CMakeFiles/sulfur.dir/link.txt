@@ -1,0 +1,1 @@
+/usr/bin/c++ -Wall -Wextra -O3 CMakeFiles/sulfur.dir/src/main.cpp.o -o sulfur   -L/home/mainuser/Desktop/progs/cpp/Sulfur/libs/libs 
