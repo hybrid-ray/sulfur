@@ -171,10 +171,13 @@ CMakeFiles/sulfur.dir/src/main.cpp.o: ../src/main.cpp \
   /usr/include/c++/8/bits/basic_ios.tcc \
   /usr/include/c++/8/bits/ostream.tcc \
   /usr/include/c++/8/istream \
-  /usr/include/c++/8/bits/istream.tcc
+  /usr/include/c++/8/bits/istream.tcc \
+  ../src/cfgs.hpp
 
 
 /usr/include/c++/8/istream:
+
+../src/cfgs.hpp:
 
 /usr/include/c++/8/bits/ostream.tcc:
 
