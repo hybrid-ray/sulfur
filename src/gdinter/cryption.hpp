@@ -1,14 +1,18 @@
-#include <algorithm>
+#include <string>
+#include <b64.hpp>
 
 constexpr unsigned char xorkey = 0x0B;
 
 namespace gdinter {
-	// decrypts gd data in-place
-	inline void decrypt(unsigned char *ldata, size_t len) {
+	// decrypts gd data
+	inline std::string decrypt(std::string dat) {
+		std::string d(dat);
 		// xor
-		for (size_t i = 0; i < len; i++) {
-			ldata[i] ^= xorkey;
+		for (size_t i = 0; i < d.size(); i++) {
+			d[i] ^= xorkey;
 		}
-		;//TODO:
+		// base64
+		std::string d2(b64decode(d));
+		// gzip
 	}
 }
