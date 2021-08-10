@@ -1,0 +1,12 @@
+<include std/move.slfh>
+
+group g = 1;
+group g2 = 2;
+group g3 = 3;
+reserve g g2 g3;
+
+std::move(g, 10, 0, 0.5) -> std::move(g, 0, 10, 0.5);
+std::move(g2, 10, 0, 0.5) -> {
+	std::move(g2, -10, 0, 0.5);
+	std::move(g3, 0, 10, 1);
+}

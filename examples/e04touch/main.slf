@@ -1,0 +1,6 @@
+<include std/colors.slfh>
+<include std/touch.slfh>
+
+std::touch({
+	std::pulse(std::bg, std::red, 0.1, 0, 0.1);
+});

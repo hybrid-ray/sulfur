@@ -1,0 +1,6 @@
+<include std/move.slfh>
+
+group objgroup = 5;
+reserve objgroup;
+
+std::move(objgroup, 10, 10, 0.5);

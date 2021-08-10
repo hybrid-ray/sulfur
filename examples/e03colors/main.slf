@@ -1,0 +1,13 @@
+<include std/colors.slfh>
+
+group g = 1;
+group g2 = 2;
+group g3 = 3;
+reserve g g2 g3;
+
+color red = color(255, 0, 0);
+colorchannel ch = 1;
+reserve ch;
+
+std::pulse(std::bg, red, 0.1, 0, 0.1)
+-> std::setcol(ch, red, 0.5);
