@@ -14,7 +14,7 @@ configure_file(./build/cfgs.hpp.in ../src/cfgs.hpp)
 include_directories("${CMAKE_CURRENT_SOURCE_DIR}/libs/include")
 link_directories("${CMAKE_CURRENT_SOURCE_DIR}/libs/libs")
 
-add_executable(sulfur ./src/main.cpp)
+add_executable(sulfur ./src/main.cpp ./src/cfgloader.cpp)
 #target_link_libraries(sulfur PUBLIC )
 add_custom_command(TARGET sulfur POST_BUILD
 	COMMAND ${CMAKE_COMMAND} -E copy
