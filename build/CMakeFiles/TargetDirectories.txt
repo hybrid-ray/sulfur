@@ -1,3 +1,0 @@
-/home/mainuser/Desktop/progs/cpp/Sulfur/build/CMakeFiles/rebuild_cache.dir
-/home/mainuser/Desktop/progs/cpp/Sulfur/build/CMakeFiles/sulfur.dir
-/home/mainuser/Desktop/progs/cpp/Sulfur/build/CMakeFiles/edit_cache.dir
