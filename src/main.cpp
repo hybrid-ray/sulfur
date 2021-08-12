@@ -9,7 +9,7 @@ void printhelp() {
 		"\thelp (h, -h, -?, --help) - shows this\n"
 		"\tversion (ver, v, -v, --version) - shows compiler version\n"
 		"flags:\n"
-		"\t-o <file> - sets output file\n"
+		"\t--debug-decode\n"
 		"\t\n"
 		"\t\n";
 	std::cout << helpstr << std::endl;
@@ -35,5 +35,6 @@ int main(int argc, char **argv) {
 		printver();
 		return 0;
 	}
+	for ()
 	return 0;
 }

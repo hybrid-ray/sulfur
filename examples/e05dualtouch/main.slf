@@ -1,0 +1,24 @@
+<include std/colors.slfh>
+<include std/items.slfh>
+<include std/ext/dualtouch.slfh>
+
+itemid itm = 1;
+reserve itm;
+
+routine checklead {
+	compare (count itm) {
+		< 0 =>  std::setcol(bg, std::red, 0.1);
+		== 0 => std::setcol(bg, std::gray, 0.1);
+		> 0 =>  std::setcol(bg, std::blue, 0.1);
+	}
+}
+routine touchl {
+	std::pickup(itm, -1);
+	spawn checklead;
+}
+routine touchr {
+	std::pickup(itm, 1);
+	spawn checklead;
+}
+
+std::dualtouch::gen(touchl, touchr);
