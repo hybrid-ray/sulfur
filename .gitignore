@@ -1,5 +1,6 @@
 ./build/CMakeFiles/
 ./build/CMakeCache.txt
 ./build/Makefile
+./build/sulfur
 ./.vscode/
 ./out/
