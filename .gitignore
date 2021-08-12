@@ -1,6 +1,7 @@
-./build/CMakeFiles/
-./build/CMakeCache.txt
-./build/Makefile
-./build/sulfur
-./.vscode/
-./out/
+build/CMakeFiles/
+build/CMakeCache.txt
+build/cmake_install.cmake
+build/Makefile
+build/sulfur
+.vscode/
+out/
