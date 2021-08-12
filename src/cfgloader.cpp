@@ -18,8 +18,15 @@ bool loadcfg() {
 		if (i != ln.npos)
 			cfg.insert(std::make_pair(ln.substr(0, i), ln.substr(i + 1)));
 	}
+	f.close();
 	return false;
 }
 bool gencfg() {
-	return true;
+	std::ofstream f("./sulfur.cfg");
+	if (f.fail()) {
+		return true;
+	}
+	f << "gddatalocation=C:/Users/<user>/AppData/Local/GeometryDash\n";
+	f.close();
+	return false;
 }

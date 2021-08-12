@@ -24,16 +24,16 @@
 
 // just to keep printing in same style over whole project
 inline void printInfo(std::string s) {
-	std::cout << CONSOLE_BRIGHT_CYAN "[INFO]: " << s << std::endl;
+	std::cout << CONSOLE_BRIGHT_CYAN "[INFO]: " CONSOLE_RESET << s << std::endl;
 }
 inline void printWarning(std::string s) {
-	std::cout << CONSOLE_BRIGHT_YELLOW "[WARNING]: " << s << std::endl;
+	std::cout << CONSOLE_BRIGHT_YELLOW "[WARNING]: " CONSOLE_RESET << s << std::endl;
 }
 inline void printError(std::string s) {
-	std::cout << CONSOLE_BRIGHT_RED "[ERROR]: " << s << std::endl;
+	std::cout << CONSOLE_BRIGHT_RED "[ERROR]: " CONSOLE_RESET << s << std::endl;
 }
 inline void printFatalError(std::string s) {
-	std::cout << CONSOLE_RED "[FATAL_ERROR]: " << s << std::endl;
+	std::cout << CONSOLE_RED "[FATAL_ERROR]: " CONSOLE_RESET << s << std::endl;
 }
 
 #endif
