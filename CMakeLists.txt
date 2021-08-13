@@ -15,7 +15,7 @@ include_directories("${CMAKE_CURRENT_SOURCE_DIR}/libs/include")
 link_directories("${CMAKE_CURRENT_SOURCE_DIR}/libs/libs")
 
 add_executable(sulfur ./src/main.cpp ./src/cfgloader.cpp)
-target_link_libraries(sulfur PUBLIC boost_system)
+target_link_libraries(sulfur PUBLIC boost_iostreams z)
 add_custom_command(TARGET sulfur POST_BUILD
 	COMMAND ${CMAKE_COMMAND} -E copy
 	${CMAKE_SOURCE_DIR}/build/sulfur ${CMAKE_CURRENT_SOURCE_DIR}/out/)
