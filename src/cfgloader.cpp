@@ -26,7 +26,7 @@ bool gencfg() {
 	if (f.fail()) {
 		return true;
 	}
-	f << "gddatalocation=C:/Users/<user>/AppData/Local/GeometryDash\n";
+	f << "gddatalocation=C:/Users/<user>/AppData/Local/GeometryDash/\n";
 	f.close();
 	return false;
 }

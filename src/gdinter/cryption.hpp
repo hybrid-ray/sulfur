@@ -1,3 +1,6 @@
+#ifndef CRYPTION_HPP
+#define CRYPTION_HPP
+
 #include <string>
 #include <b64.hpp>
 #include <gzip.hpp>
@@ -24,3 +27,5 @@ namespace gdinter {
 		return d2;
 	}
 }
+
+#endif

@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 #include "gdinter/cryption.hpp"
+#include "gdinter/files.hpp"
 #include "cfgloader.hpp"
 #include "cfgs.hpp"
 #include "prints.hpp"
@@ -65,7 +66,7 @@ int main(int argc, char **argv) {
 					std::cout << p.first << ": " << p.second << std::endl;
 				}
 			} else if (a == "--debug-decode") {
-				//gdinter::decrypt(gdinter::cclocallevels());
+				gdinter::decrypt(gdinter::cclocallevels());
 			} else if (a == "--open-config") {
 				if (++i >= argc) {
 					printFatalError("--open-config needs editor");
