@@ -16,7 +16,7 @@ static const int B64index[256] =
     41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51
 };
 
-const std::string b64encode(const void* data, const size_t &len)
+inline const std::string b64encode(const void* data, const size_t &len)
 {
     std::string result((len + 2) / 3 * 4, '=');
     unsigned char *p = (unsigned  char*) data;
@@ -42,7 +42,7 @@ const std::string b64encode(const void* data, const size_t &len)
     return result;
 }
 
-const std::string b64decode(const void* data, const size_t &len)
+inline const std::string b64decode(const void* data, const size_t &len)
 {
     if (len == 0) return "";
 
@@ -74,12 +74,12 @@ const std::string b64decode(const void* data, const size_t &len)
     return result;
 }
 
-std::string b64encode(const std::string& str)
+inline std::string b64encode(const std::string& str)
 {
     return b64encode(str.c_str(), str.size());
 }
 
-std::string b64decode(const std::string& str64)
+inline std::string b64decode(const std::string& str64)
 {
     return b64decode(str64.c_str(), str64.size());
 }

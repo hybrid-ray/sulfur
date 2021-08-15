@@ -8,6 +8,8 @@
 namespace gdinter {
 	class levels {
 	public:
+		unsigned int levelcount;
+
 		levels();
 		~levels();
 

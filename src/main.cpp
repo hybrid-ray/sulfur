@@ -16,6 +16,8 @@ void printhelp() {
 		"flags:\n"
 		"\t--debug-config - prints config\n"
 		"\t--debug-decode - prints CCLocalLevels.dat but decrypted\n"
+		"\t--debug-ldecode <ls> - prints decoded level string"
+		"\t--list-levels - lists levels loaded from CCLocalLevels.dat\n"
 		"\t--open-config <editor> - opens config file using <editor>\n"
 		"\t\n"
 		"\t\n";
@@ -57,6 +59,8 @@ int main(int argc, char **argv) {
 			return -1;
 		}
 	}
+	gdinter::levels l;
+	l.load();
 	for (int i = 0; i < argc; ++i) {
 		if (!*argv[i])
 			continue;
@@ -68,6 +72,15 @@ int main(int argc, char **argv) {
 				}
 			} else if (a == "--debug-decode") {
 				std::cout << gdinter::decryptFile(gdinter::cclocallevels()) << std::endl;
+			} else if (a == "--debug-ldecode") {
+				if (++i >= argc) {
+					printError("--debug-ldecode needs argument");
+					continue;
+				}
+				std::cout << gdinter::decryptLevel(argv[i]);
+			} else if (a == "--list-levels") {
+				printInfo("level count: " + std::to_string(l.levelcount));
+				printInfo("The rest of this feature is undone :/"); // TODO:
 			} else if (a == "--open-config") {
 				if (++i >= argc) {
 					printFatalError("--open-config needs editor");
@@ -80,7 +93,5 @@ int main(int argc, char **argv) {
 			;
 		}
 	}
-	gdinter::levels l;
-	l.load();
 	return 0;
 }
